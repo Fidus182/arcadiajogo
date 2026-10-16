@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090b14">
+<title>ARCADIA — Jogos Online</title>
+<style>
+:root{--bg:#090b14;--panel:#141827;--line:#ffffff15;--muted:#a4acc2;--purple:#8b5cf6;--cyan:#29d8e8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 10% 0,#5636af30,transparent 38%),radial-gradient(ellipse at 90% 20%,#139db61c,transparent 35%),var(--bg);color:#f5f7ff;font-family:Inter,system-ui,Segoe UI,Arial,sans-serif}.wrap{width:min(1320px,calc(100% - 36px));margin:auto}header{position:sticky;top:0;z-index:5;background:#090b14e8;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav{height:72px;display:flex;align-items:center;gap:25px}.brand{font-size:22px;font-weight:950;letter-spacing:1px;white-space:nowrap;text-decoration:none;color:white}.brand b{color:var(--cyan)}.logo{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:12px;margin-right:8px;background:linear-gradient(135deg,var(--purple),var(--cyan))}.navlinks{display:flex;gap:20px}.navlinks a{color:var(--muted);text-decoration:none;font-size:13px;font-weight:700}.search{margin-left:auto;position:relative;width:min(360px,35vw)}.search:before{content:'⌕';position:absolute;left:13px;top:6px;color:var(--muted);font-size:23px}.search input{width:100%;background:#151928;border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 38px;color:white;outline:none}.search input:focus{border-color:var(--purple)}.hero{padding:36px 0 22px}.hero-card{border:1px solid #ffffff1a;border-radius:26px;overflow:hidden;display:grid;grid-template-columns:1.1fr .9fr;background:linear-gradient(110deg,#1a1530,#111a2a 65%,#10272e);min-height:320px}.hero-copy{padding:42px 0 40px 44px;z-index:1}.eyebrow{display:inline-block;border:1px solid #8b5cf655;background:#8b5cf61c;color:#d8ccff;border-radius:30px;padding:7px 11px;font-size:10px;font-weight:900;letter-spacing:1px}.hero h1{font-size:clamp(38px,5vw,62px);line-height:1;letter-spacing:-2.6px;margin:22px 0 14px}.hero h1 span{background:linear-gradient(90deg,#b5a0ff,#54e5ed);color:transparent;background-clip:text}.hero p{max-width:480px;color:#b3bdd4;line-height:1.7;font-size:14px}.btn{border:0;border-radius:11px;padding:13px 18px;background:linear-gradient(100deg,var(--purple),#6855e8);color:white;font-weight:850;cursor:pointer}.hero-art{display:grid;place-items:center;position:relative;overflow:hidden}.hero-art:before{content:'🎮';font-size:clamp(100px,15vw,180px);filter:drop-shadow(0 20px 30px #0008);transform:rotate(-12deg);z-index:1}.orb{position:absolute;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle at 30% 25%,#45e6ef99,transparent 30%),radial-gradient(circle at 60% 70%,#a06bffcc,transparent 55%)}.float{position:absolute;z-index:2;background:#111522d9;border:1px solid #ffffff25;border-radius:12px;padding:11px 13px;font-size:11px}.float b{display:block;font-size:14px}.f1{right:22px;top:35px}.f2{left:15px;bottom:28px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:17px 0 30px}.stat{border:1px solid var(--line);border-radius:14px;padding:14px 17px;background:#ffffff05;display:flex;gap:12px;align-items:center}.stat i{font-style:normal;font-size:22px}.stat b{display:block;font-size:13px}.stat small{color:var(--muted);font-size:11px}.head{display:flex;justify-content:space-between;align-items:end;gap:14px;margin:28px 0 17px}.head h2{margin:0 0 5px;font-size:25px}.head p{margin:0;color:var(--muted);font-size:12px}.count{font-size:12px;color:var(--muted);white-space:nowrap}.status{border:1px solid #29d8e833;background:#29d8e80b;border-radius:11px;padding:12px 14px;margin-bottom:17px;font-size:12px;color:#bdc9dd}.status.error{border-color:#ff4fa355;color:#ffc3d9}.filters{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:18px}.chips{display:flex;gap:8px;flex-wrap:wrap}.chip{background:#ffffff06;color:#c0c8dc;border:1px solid var(--line);padding:9px 12px;border-radius:30px;font-size:11px;font-weight:800;cursor:pointer}.chip.active,.chip:hover{background:#8b5cf626;border-color:#8b5cf6aa;color:white}select{background:#151928;color:white;border:1px solid var(--line);padding:10px 12px;border-radius:10px}.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:15px}.card{border:1px solid var(--line);background:linear-gradient(#151a29,#10131f);border-radius:15px;overflow:hidden;cursor:pointer;transition:.2s;min-width:0}.card:hover{transform:translateY(-4px);border-color:#8b5cf688;box-shadow:0 18px 35px #0005}.thumb{aspect-ratio:4/3;position:relative;background:#1b2030;overflow:hidden}.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:.3s}.card:hover img{transform:scale(1.05)}.tag{position:absolute;top:8px;left:8px;max-width:calc(100% - 16px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:#090b14df;border:1px solid #ffffff22;border-radius:6px;padding:5px 7px;font-size:9px;font-weight:800}.play{position:absolute;inset:0;display:grid;place-items:center;background:#07091255;opacity:0;transition:.2s}.play span{background:linear-gradient(135deg,var(--purple),var(--cyan));border-radius:50%;width:46px;height:46px;display:grid;place-items:center;font-size:19px}.card:hover .play{opacity:1}.info{padding:11px 12px 13px}.info h3{font-size:12px;margin:0 0 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.meta{display:flex;justify-content:space-between;gap:5px;font-size:10px;color:var(--muted)}.meta b{color:#d9d2ff}.loading{grid-column:1/-1;text-align:center;padding:50px 15px;color:var(--muted);border:1px solid var(--line);border-radius:15px}.spinner{display:inline-block;width:19px;height:19px;border:2px solid #ffffff22;border-top-color:var(--cyan);border-radius:50%;animation:spin .8s linear infinite;vertical-align:middle;margin-right:9px}@keyframes spin{to{transform:rotate(360deg)}}.pages{display:flex;align-items:center;justify-content:center;gap:12px;margin:27px 0 42px}.pages button{background:#171c2c;border:1px solid var(--line);color:white;border-radius:9px;padding:10px 14px;cursor:pointer;font-weight:800}.pages button:disabled{opacity:.35;cursor:not-allowed}.pages span{font-size:12px;color:var(--muted)}.callout{margin:25px 0 45px;padding:25px;border:1px solid #29d8e833;border-radius:18px;background:linear-gradient(100deg,#15172a,#10232a);display:flex;align-items:center;justify-content:space-between;gap:20px}.callout h2{font-size:19px;margin:0 0 6px}.callout p{font-size:12px;line-height:1.6;color:var(--muted);margin:0}.callout a{background:var(--cyan);color:#061115;border-radius:9px;padding:12px 15px;font-weight:900;font-size:11px;white-space:nowrap;text-decoration:none}footer{border-top:1px solid var(--line);padding:26px 0 32px;color:var(--muted);font-size:11px}.foot{display:flex;justify-content:space-between;gap:15px}.disclaimer{line-height:1.65;max-width:900px;margin-top:12px}.modal{position:fixed;inset:0;z-index:30;display:none;align-items:center;justify-content:center;padding:18px;background:#03040bf0;backdrop-filter:blur(12px)}.modal.open{display:flex}.modalbox{width:min(1200px,100%);border:1px solid #ffffff20;border-radius:18px;background:#0f1320;overflow:hidden}.modalhead{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 16px;border-bottom:1px solid var(--line)}.modaltitle{font-weight:900;font-size:14px}.modalhead a,.modalhead button{font-size:11px;font-weight:800;padding:9px 11px;border:1px solid var(--line);border-radius:8px;background:#ffffff08;color:white;text-decoration:none;cursor:pointer}.modalhead>div:last-child{display:flex;gap:8px}.frame{width:100%;aspect-ratio:16/9;max-height:calc(100vh - 110px);background:#05060b}.frame iframe{width:100%;height:100%;border:0;display:block}.note{padding:10px 14px;font-size:10px;color:var(--muted)}
+
+.admin-open{border:1px solid #8b5cf677;background:#8b5cf61a;color:#eee7ff;border-radius:10px;padding:10px 12px;font-size:11px;font-weight:850;cursor:pointer;white-space:nowrap}
+.admin-open:hover{background:#8b5cf633;border-color:#29d8e8}
+.admin-modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;padding:16px;background:#03040bf2;backdrop-filter:blur(12px);overflow:auto}
+.admin-modal.open{display:flex}
+.admin-box{width:min(760px,100%);max-height:calc(100vh - 32px);overflow:auto;border:1px solid #ffffff22;border-radius:20px;background:#101523;box-shadow:0 30px 100px #0009}
+.admin-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:18px 20px;border-bottom:1px solid var(--line)}
+.admin-top h2{font-size:18px;margin:0}.admin-top p{font-size:11px;color:var(--muted);margin:5px 0 0}
+.admin-close{background:#ffffff0a;border:1px solid var(--line);color:white;border-radius:9px;padding:9px 12px;cursor:pointer}
+.admin-body{padding:20px}.admin-form{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.admin-field{display:flex;flex-direction:column;gap:7px;min-width:0}.admin-field.full{grid-column:1/-1}
+.admin-field label{font-size:11px;color:#c7cde0;font-weight:800}
+.admin-field input,.admin-field textarea,.admin-field select{width:100%;background:#090d18;color:white;border:1px solid #ffffff20;border-radius:10px;padding:12px;font:inherit;font-size:12px;outline:none}
+.admin-field textarea{min-height:92px;resize:vertical}.admin-field input:focus,.admin-field textarea:focus{border-color:var(--purple)}
+.admin-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:15px}
+.admin-message{font-size:12px;color:#8ef0ce;margin-top:12px;line-height:1.5}.admin-message.error{color:#ffb5cc}
+.admin-list{border-top:1px solid var(--line);margin-top:22px;padding-top:17px}.admin-list h3{margin:0 0 10px;font-size:14px}
+.admin-game{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--line)}
+.admin-game img{width:65px;height:45px;object-fit:cover;border-radius:7px;background:#222}
+.admin-game-info{min-width:0;flex:1}.admin-game-info b{display:block;font-size:12px;overflow-wrap:anywhere}.admin-game-info small{color:var(--muted);font-size:10px}
+.admin-delete{background:#ff4d7614;border:1px solid #ff4d7640;color:#ffc3d2;border-radius:8px;padding:8px 10px;cursor:pointer;font-size:11px}
+.admin-hint{border:1px solid #f6bd4b35;background:#f6bd4b0c;color:#e9d9b4;border-radius:10px;padding:11px 12px;font-size:11px;line-height:1.55;margin-bottom:16px}
+@media(max-width:600px){.admin-open{padding:8px;font-size:9px}.nav{gap:7px}.admin-body{padding:14px}.admin-form{grid-template-columns:1fr}.admin-field.full{grid-column:auto}.admin-top{padding:14px}.admin-top h2{font-size:15px}}
+
+@media(max-width:1100px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:820px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.navlinks{display:none}.hero-copy{padding-left:28px}}@media(max-width:600px){.wrap{width:calc(100% - 24px)}.nav{height:63px;gap:10px}.brand{font-size:16px}.logo{width:32px;height:32px}.search{width:auto;flex:1}.search input{font-size:11px}.hero{padding-top:17px}.hero-card{grid-template-columns:1fr}.hero-copy{padding:26px 21px 5px}.hero h1{font-size:42px}.hero-art{min-height:175px}.hero-art:before{font-size:100px}.orb{width:190px;height:190px}.f1{top:13px;right:13px}.f2{bottom:12px;left:12px}.stats{gap:6px;margin:12px 0 23px}.stat{padding:10px 7px;gap:6px}.stat i{font-size:16px}.stat b{font-size:10px}.stat small{font-size:9px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.info{padding:9px}.info h3{font-size:11px}.head h2{font-size:21px}.callout{align-items:flex-start;flex-direction:column}.foot{flex-direction:column}.modal{padding:6px}.modalhead{padding:9px}.modalhead a,.modalhead button{padding:7px;font-size:9px}.frame{aspect-ratio:4/3}.modaltitle{font-size:11px}}@media(max-width:350px){.grid{gap:6px}.brand{font-size:13px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#"><span class="logo">✦</span>ARCA<b>DIA</b></a>
+<nav class="navlinks"><a href="#inicio">Início</a><a href="#jogos">Jogos</a><a href="#categorias">Categorias</a></nav><button class="admin-open" id="adminOpen" type="button">⚙ Administrador</button>
+<label class="search"><input id="search" type="search" placeholder="Buscar jogos..." aria-label="Buscar jogos"></label>
+</div></header>
+<main class="wrap" id="inicio">
+<section class="hero"><div class="hero-card"><div class="hero-copy"><div class="eyebrow">● &nbsp; SUA PRÓXIMA FASE COMEÇA AQUI</div><h1>Centenas de jogos.<br><span>Uma só missão.</span></h1><p>Explore uma grande coleção de jogos online, descubra novos favoritos e jogue direto no navegador — sem instalar nada.</p><button class="btn" id="explore">Explorar catálogo ↗</button></div><div class="hero-art"><div class="orb"></div><div class="float f1"><b>GAME ON</b>Escolha e jogue</div><div class="float f2"><b>Novos desafios</b>Centenas de capas</div></div></div>
+<div class="stats"><div class="stat"><i>⚡</i><div><b>Jogue na hora</b><small>Sem instalação</small></div></div><div class="stat"><i>🕹️</i><div><b>Até 2.000 jogos</b><small>Catálogo dinâmico</small></div></div><div class="stat"><i>📱</i><div><b>PC e celular</b><small>Layout responsivo</small></div></div></div></section>
+<section id="jogos"><div class="head"><div><h2>Descubra seu próximo jogo</h2><p>Capas, nomes e links carregados do feed GameMonetize.</p></div><span class="count" id="count">Conectando…</span></div>
+<div class="status" id="status"><span class="spinner"></span>Buscando jogos e capas no catálogo GameMonetize…</div>
+<div class="filters"><div class="chips" id="categories">
+<button class="chip active" data-cat="Todos">Todos</button><button class="chip" data-cat="Action">⚔️ Ação</button><button class="chip" data-cat="Adventure">🌌 Aventura</button><button class="chip" data-cat="Arcade">👾 Arcade</button><button class="chip" data-cat="Puzzle">🧩 Puzzle</button><button class="chip" data-cat="Racing">🏎️ Corrida</button><button class="chip" data-cat="Sports">⚽ Esporte</button><button class="chip" data-cat="Shooting">🎯 Tiro</button><button class="chip" data-cat="3D">🧊 3D</button><button class="chip" data-cat="Other">✨ Outros</button></div>
+<select id="sort" aria-label="Ordenar jogos"><option value="feed">Ordem do catálogo</option><option value="az">Nome: A–Z</option><option value="za">Nome: Z–A</option></select></div>
+<div class="grid" id="grid"><div class="loading"><span class="spinner"></span>Carregando capas e jogos…</div></div>
+<div class="pages"><button id="prev" disabled>← Anterior</button><span id="pageLabel">Página 1</span><button id="next" disabled>Próxima →</button></div></section>
+<section class="callout"><div><h2>Catálogo oficial GameMonetize</h2><p>Os jogos e as capas são obtidos pelo feed de distribuição. A disponibilidade de cada jogo pode variar.</p></div><a href="https://gamemonetize.com/" target="_blank" rel="noopener noreferrer">VISITAR GAMEMONETIZE ↗</a></section>
+</main>
+<footer><div class="wrap"><div class="foot"><a class="brand" href="#"><span class="logo">✦</span>ARCA<b>DIA</b></a><span>Portal independente de jogos online.</span></div><div class="disclaimer">Os jogos, títulos e capas pertencem aos respectivos criadores. Dados e imagens são fornecidos pelo GameMonetize. Este site é independente e não é afiliado oficialmente ao GameMonetize. Alguns jogos podem bloquear incorporação externa; nesse caso, abra o jogo em uma nova aba.</div></div></footer>
+
+<div class="admin-modal" id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adminHeading">
+  <div class="admin-box">
+    <div class="admin-top">
+      <div><h2 id="adminHeading">⚙ Painel do administrador</h2><p>Gerencie os jogos personalizados do ARCADIA</p></div>
+      <button class="admin-close" id="adminClose" type="button">✕ Fechar</button>
+    </div>
+    <div class="admin-body">
+      <form id="adminLoginForm">
+        <div class="admin-hint">Entre com o e-mail e a senha do administrador cadastrados no Supabase.</div>
+        <div class="admin-form">
+          <div class="admin-field"><label for="adminUser">Usuário do administrador</label><input id="adminUser" type="text" autocomplete="username" required placeholder="Fidus"></div>
+          <div class="admin-field"><label for="adminPass">Senha</label><input id="adminPass" type="password" autocomplete="current-password" required placeholder="Sua senha"></div>
+        </div>
+        <div class="admin-actions"><button class="btn" type="submit">Entrar no painel →</button></div>
+        <div id="loginMessage" class="admin-message error" aria-live="polite"></div>
+      </form>
+      <div id="adminDashboard" hidden>
+        <div class="admin-hint">Os jogos personalizados são salvos no banco de dados online e aparecem para todos os visitantes do ARCADIA.</div>
+        <form id="addGameForm">
+          <div class="admin-form">
+            <div class="admin-field"><label for="gameTitle">Nome do jogo *</label><input id="gameTitle" required maxlength="120" placeholder="Ex.: Corrida Radical"></div>
+            <div class="admin-field"><label for="gameCategory">Categoria</label><select id="gameCategory"><option>Ação</option><option>Aventura</option><option>Arcade</option><option>Puzzle</option><option>Corrida</option><option>Esporte</option><option>Tiro</option><option>3D</option><option>Outros</option></select></div>
+            <div class="admin-field full"><label for="gameCover">URL da capa *</label><input id="gameCover" type="url" required placeholder="https://site.com/capa.jpg"></div>
+            <div class="admin-field full"><label for="gameEmbed">Embed do jogo ou URL do jogo *</label><textarea id="gameEmbed" required placeholder='<iframe src="https://jogo.com/embed" allowfullscreen></iframe>'></textarea></div>
+          </div>
+          <div class="admin-actions"><button class="btn" type="submit">＋ Adicionar jogo ao catálogo</button><button class="admin-close" id="adminLogout" type="button">Sair do administrador</button></div>
+          <div id="addMessage" class="admin-message" aria-live="polite"></div>
+        </form>
+        <div class="admin-list"><h3>Seus jogos adicionados (<span id="customCount">0</span>)</h3><div id="customGameList"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true"><div class="modalbox"><div class="modalhead"><div class="modaltitle" id="modalTitle">Jogo</div><div><a id="external" href="#" target="_blank" rel="noopener noreferrer">Abrir em nova aba ↗</a><button id="close">✕ Fechar</button></div></div><div class="frame" id="frame"></div><div class="note">Se o jogo não carregar aqui, use “Abrir em nova aba”. Alguns provedores bloqueiam exibição em iframe.</div></div></div>
+<script>
+const FEED='https://gamemonetize.com/feed.php', PER_PAGE=100, MAX_FEED_PAGES=20, PAGE_SIZE=40;
+const API='/api/games';
+let adminToken='';
+async function apiRequest(body, token=''){const headers={'Content-Type':'application/json'};if(token)headers.Authorization='Bearer '+token;const r=await fetch(API,{method:body?'POST':'GET',headers,body:body?JSON.stringify(body):undefined,cache:'no-store'});const data=await r.json().catch(()=>({error:'Resposta inválida do servidor'}));if(!r.ok)throw Error(data.error||'Erro na comunicação com o servidor');return data;}
+let games=[], page=1, category='Todos';
+const $=id=>document.getElementById(id), grid=$('grid'), status=$('status');
+function value(el,tag){return el.getElementsByTagName(tag)[0]?.textContent.trim()||''}
+function parse(xml){const doc=new DOMParser().parseFromString(xml,'text/xml');if(doc.querySelector('parsererror'))throw Error('Feed inválido');return [...doc.getElementsByTagName('item')].map(el=>({title:value(el,'title'),category:value(el,'category')||'Outros',tags:value(el,'tags'),description:value(el,'description'),instructions:value(el,'instructions'),url:value(el,'url'),thumb:value(el,'thumb')})).filter(g=>g.title&&g.url&&g.thumb)}
+async function getPage(n){const p=new URLSearchParams({format:'1',num:String(PER_PAGE),page:String(n)});const r=await fetch(`${FEED}?${p}`,{cache:'no-store'});if(!r.ok)throw Error('Resposta HTTP '+r.status);return parse(await r.text())}
+async function load(){let result=[];try{status.className='status';status.innerHTML='<span class="spinner"></span>Buscando jogos e capas oficiais…';for(let start=1;start<=MAX_FEED_PAGES;start+=5){const end=Math.min(start+4,MAX_FEED_PAGES);const batch=await Promise.allSettled(Array.from({length:end-start+1},(_,i)=>getPage(start+i)));batch.forEach((r)=>{if(r.status==='fulfilled')result.push(...r.value);else console.warn('Uma página do catálogo não carregou:',r.reason)});status.innerHTML='<span class="spinner"></span>Carregando catálogo: '+result.length+' jogos recebidos…'}}catch(e){console.error(e)}const unique=new Map();result.forEach(g=>unique.set(g.url,g));try{const data=await apiRequest();(data.games||[]).forEach(g=>unique.set(g.url,{...g,custom:true,customId:g.url,instructions:''}));games=[...unique.values()];status.className='status';status.textContent=`Catálogo carregado: ${games.length} jogos. Os jogos personalizados são compartilhados com todos os visitantes.`}catch(e){console.error('Falha ao carregar jogos compartilhados:',e);games=[...unique.values()];status.className='status error';status.textContent='O catálogo base está carregado, mas o banco online ainda não respondeu. Publique esta pasta no Netlify com as funções habilitadas.'}$('count').textContent=`${games.length} jogos`;$('count').textContent=`${games.length} jogos`;render()}
+function normalizedCategory(value){const s=String(value||'').trim().toLocaleLowerCase('pt-BR');const aliases={'ação':'action','acao':'action','action':'action','aventura':'adventure','adventure':'adventure','arcade':'arcade','puzzle':'puzzle','corrida':'racing','racing':'racing','esporte':'sports','esportes':'sports','sports':'sports','tiro':'shooting','shooting':'shooting','outros':'other','outro':'other','other':'other','3d':'3d'};return aliases[s]||s}
+function filtered(){let q=$('search').value.trim().toLocaleLowerCase('pt-BR');let list=games.filter(g=>(category==='Todos'||normalizedCategory(g.category)===normalizedCategory(category))&&(`${g.title} ${g.category} ${g.tags} ${g.description}`).toLocaleLowerCase('pt-BR').includes(q));if($('sort').value==='az')list.sort((a,b)=>a.title.localeCompare(b.title));if($('sort').value==='za')list.sort((a,b)=>b.title.localeCompare(a.title));return list}
+function render(){let list=filtered(),max=Math.max(1,Math.ceil(list.length/PAGE_SIZE));if(page>max)page=max;let items=list.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE);$('count').textContent=`${list.length} jogos`;$('pageLabel').textContent=`Página ${page} de ${max}`;$('prev').disabled=page<=1;$('next').disabled=page>=max;grid.innerHTML='';if(!items.length){grid.innerHTML='<div class="loading">Nenhum jogo encontrado. Tente outra busca ou categoria.</div>';return}let frag=document.createDocumentFragment();items.forEach(g=>{let c=document.createElement('article');c.className='card';c.tabIndex=0;c.setAttribute('role','button');c.setAttribute('aria-label','Jogar '+g.title);let t=document.createElement('div');t.className='thumb';let img=document.createElement('img');img.src=g.thumb;img.alt='Capa de '+g.title;img.loading='lazy';img.onerror=()=>{img.style.visibility='hidden';t.style.background='linear-gradient(135deg,#26213f,#17313b)'};let tag=document.createElement('span');tag.className='tag';tag.textContent=g.category;let play=document.createElement('div');play.className='play';play.innerHTML='<span>▶</span>';t.append(img,tag,play);let info=document.createElement('div');info.className='info';let h=document.createElement('h3');h.textContent=g.title;h.title=g.title;let meta=document.createElement('div');meta.className='meta';let cat=document.createElement('span');cat.textContent='◈ '+g.category;let launch=document.createElement('b');launch.textContent='JOGAR ↗';meta.append(cat,launch);info.append(h,meta);c.append(t,info);c.onclick=()=>open(g);c.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(g)}};frag.append(c)});grid.append(frag)}
+function open(g){$('modalTitle').textContent=g.title;$('external').href=g.url;$('frame').innerHTML='';let f=document.createElement('iframe');f.src=g.url;f.title=g.title;f.allow='fullscreen; autoplay';f.allowFullscreen=true;f.loading='eager';$('frame').append(f);$('modal').classList.add('open');document.body.style.overflow='hidden'}
+function close(){ $('modal').classList.remove('open');$('frame').innerHTML='';document.body.style.overflow=''}
+$('close').onclick=close;$('modal').onclick=e=>{if(e.target===$('modal'))close()};document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+$('search').addEventListener('input',()=>{page=1;render()});$('sort').onchange=()=>{page=1;render()};
+document.querySelectorAll('[data-cat]').forEach(b=>b.onclick=()=>{document.querySelectorAll('[data-cat]').forEach(x=>x.classList.remove('active'));b.classList.add('active');category=b.dataset.cat;page=1;render()});
+$('prev').onclick=()=>{if(page>1){page--;render();$('jogos').scrollIntoView({behavior:'smooth'})}};$('next').onclick=()=>{if(page<Math.ceil(filtered().length/PAGE_SIZE)){page++;render();$('jogos').scrollIntoView({behavior:'smooth'})}};$('explore').onclick=()=>$('jogos').scrollIntoView({behavior:'smooth'});
+
+let adminLoggedIn=false;
+async function fetchCustomGames(){const data=await apiRequest();return (data.games||[]).map(g=>({...g,customId:g.url,custom:true,instructions:''}));}
+async function refreshCustomList(){
+  const host=$('customGameList');host.innerHTML='<p style="font-size:12px;color:var(--muted)">Carregando jogos…</p>';
+  let list=[];try{list=await fetchCustomGames()}catch(e){host.innerHTML='<p style="font-size:12px;color:#ffb5cc">Erro ao carregar os jogos: '+e.message+'</p>';return}
+  $('customCount').textContent=list.length;host.innerHTML='';
+  if(!list.length){host.innerHTML='<p style="font-size:12px;color:var(--muted)">Nenhum jogo personalizado cadastrado ainda.</p>';return}
+  list.forEach(g=>{const row=document.createElement('div');row.className='admin-game';const img=document.createElement('img');img.src=g.thumb;img.alt='';img.onerror=()=>img.style.visibility='hidden';const info=document.createElement('div');info.className='admin-game-info';const title=document.createElement('b');title.textContent=g.title;const small=document.createElement('small');small.textContent=g.category;info.append(title,small);const del=document.createElement('button');del.type='button';del.className='admin-delete';del.textContent='Excluir';del.onclick=async()=>{if(!confirm('Excluir "'+g.title+'" do catálogo para todos os visitantes?'))return;try{await apiRequest({action:'delete',url:g.url},adminToken);games=games.filter(x=>x.url!==g.url);render();await refreshCustomList();$('addMessage').textContent='Jogo excluído do catálogo compartilhado.';$('addMessage').className='admin-message'}catch(e){alert('Não foi possível excluir o jogo: '+e.message)}};row.append(img,info,del);host.append(row)})
+}
+function showAdmin(){ $('adminModal').classList.add('open'); document.body.style.overflow='hidden'; if(adminLoggedIn){$('adminLoginForm').hidden=true;$('adminDashboard').hidden=false;refreshCustomList()}else{$('adminLoginForm').hidden=false;$('adminDashboard').hidden=true;$('adminUser').focus()} }
+function hideAdmin(){ $('adminModal').classList.remove('open');document.body.style.overflow=''; }
+$('adminOpen').onclick=showAdmin;
+$('adminClose').onclick=hideAdmin;
+$('adminModal').onclick=e=>{if(e.target===$('adminModal'))hideAdmin()};
+$('adminLoginForm').addEventListener('submit',async e=>{e.preventDefault();const user=$('adminUser').value.trim();const pass=$('adminPass').value;const msg=$('loginMessage');msg.textContent='Conectando…';msg.className='admin-message';try{const result=await apiRequest({action:'login',username:user,password:pass});adminToken=result.token;adminLoggedIn=true;msg.textContent='';$('adminLoginForm').hidden=true;$('adminDashboard').hidden=false;await refreshCustomList();}catch(err){msg.textContent='Não foi possível entrar: '+err.message;msg.className='admin-message error'}});
+$('adminLogout').onclick=()=>{adminToken='';adminLoggedIn=false;$('adminPass').value='';$('adminLoginForm').hidden=false;$('adminDashboard').hidden=true;$('loginMessage').textContent='Você saiu do administrador.'};
+function extractEmbedURL(input){
+  const raw=input.trim();if(!raw)throw Error('Informe o embed ou URL do jogo.');
+  let url=raw;
+  if(/<iframe[\s>]/i.test(raw)){
+    const doc=new DOMParser().parseFromString(raw,'text/html');const iframe=doc.querySelector('iframe');
+    if(!iframe||!iframe.getAttribute('src'))throw Error('Não encontrei um src válido no iframe. Cole o embed completo.');
+    url=iframe.getAttribute('src').trim();
+  } else if (/<[a-z!/]/i.test(raw)) {
+    throw Error('Cole apenas o código de um iframe ou a URL direta do jogo.');
+  }
+  let parsed;try{parsed=new URL(url,location.href)}catch{throw Error('A URL do jogo é inválida.')}
+  if(!['https:','http:'].includes(parsed.protocol))throw Error('Use uma URL de jogo começando com http:// ou https://.');
+  return parsed.href;
+}
+$('addGameForm').addEventListener('submit',async e=>{
+  e.preventDefault();const msg=$('addMessage');msg.className='admin-message';
+  try{
+    if(!adminLoggedIn||!adminToken)throw Error('Entre novamente como administrador.');
+    const title=$('gameTitle').value.trim();const thumb=new URL($('gameCover').value.trim());if(!['https:','http:'].includes(thumb.protocol))throw Error('A capa precisa ser uma URL HTTP ou HTTPS.');
+    const url=extractEmbedURL($('gameEmbed').value);if(!title)throw Error('Informe o nome do jogo.');
+    const game={title,category:$('gameCategory').value,thumb:thumb.href,url,tags:'personalizado',description:'Jogo adicionado pelo administrador',custom:true};
+    msg.textContent='Salvando no banco online…';
+    const result=await apiRequest({action:'save',game},adminToken);const saved={...result.game,customId:result.game.url,custom:true,instructions:''};const map=new Map(games.map(g=>[g.url,g]));map.set(saved.url,saved);games=[...map.values()];page=1;category='Todos';document.querySelectorAll('[data-cat]').forEach(x=>x.classList.toggle('active',x.dataset.cat==='Todos'));render();await refreshCustomList();$('addGameForm').reset();msg.textContent='Jogo salvo online! Agora aparece para todos os visitantes.';msg.className='admin-message';
+  }catch(err){msg.textContent=err.message||'Não foi possível adicionar o jogo.';msg.className='admin-message error'}
+});
+load();
+</script>
+</body>
+</html>
